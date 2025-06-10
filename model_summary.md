@@ -1,50 +1,59 @@
-# Model Summary – Customer Churn Analysis
+# Model Summary – Customer Churn Prediction
 
 Author: Anusha Durgam
 
-## 🎯 Problem:
-Predict whether a customer will churn based on demographic and service-related features.
+## 📌 Problem
+Classify whether a telecom customer will churn based on service usage and demographic data.
 
-## 🧪 Dataset:
-- ~7,000+ entries
-- 20+ features including service type, payment methods, and customer tenure
-- Target: `Churn` (Yes=1, No=0)
+## 🧾 Dataset
+- 7,000+ records, 20+ features
+- Target: Churn (Yes/No)
 
 ---
 
-## 📘 Models Tested:
+## 🔍 Models Evaluated
 - Logistic Regression
 - Random Forest
-- Support Vector Machine (SVM)
 - XGBoost
+- SVM ✅ (Best Performance)
 
----
-
-## ✅ Final Model: SVM (or replace with final used model)
-- Accuracy: ~82%
-- ROC-AUC: ~0.85
-- Selected for high precision and generalization
-
----
-
-## 📊 Feature Engineering:
+## ⚙️ Preprocessing
 - One-hot encoding for categorical features
-- StandardScaler for numerical features
-- Tenure bucketization (e.g., 1–12, 13–24, etc.)
+- StandardScaler for numerical
+- Tenure Group bucketing for feature enhancement
 
 ---
 
-## 📈 Evaluation Metrics:
+## 🎯 Evaluation Metrics
 - Accuracy
+- F1-score
+- Precision/Recall
+- ROC-AUC
 - Confusion Matrix
-- Precision, Recall, F1-score
-- ROC Curve and AUC
+
+## ✅ Final Model
+- **SVM**
+- High accuracy & generalization
+- Deployed via Streamlit
 
 ---
 
-## 🚀 Deployment:
-- Streamlit used for real-time prediction interface
-- Power BI dashboard built for churn insights and executive reporting
+## 📊 Business Dashboard
+- **Tool**: Power BI
+- **File**: `churm analysis.pbix`
+- **Insights**:
+  - Churn breakdown by contract type
+  - MonthlyCharges vs Tenure
+  - Customer segmentation filters
 
-## 💡 Final Takeaway:
-Customer churn prediction enables proactive retention strategies. A well-tuned SVM/XGBoost model with clear visual feedback helps improve business decisions and customer satisfaction.
+---
+
+## 🚀 Deployment
+- Model served using Streamlit
+- UI includes customer input + result
+- Dashboard supports decision-making for stakeholders
+
+---
+
+## 🔚 Summary
+This project delivers a complete ML pipeline with real-time prediction and executive-level reporting. The integration of Streamlit and Power BI enables both data science exploration and stakeholder engagement.
